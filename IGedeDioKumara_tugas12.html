@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> (Latihan 12) CSS - Grid</title>
+<style>
+    div{
+    text-align: center;
+    } 
+
+    body {
+    font-family: Arial, sans-serif;
+    max-width: 50%;
+    }
+
+    .header {
+    grid-area: header;
+    height: 70px;
+    text-align: center;
+    }
+
+    .grid-container {
+    display: grid;
+    grid-template-areas: 
+        'header header header header header header' 
+        'left middle middle middle middle right' 
+        'footer footer footer footer footer footer';
+    } 
+
+    .sidebar-kiri,
+    .article,
+    .sidebar-kanan {
+    height: 500px; 
+    background-color: #0087d4;
+    }
+
+    .header,
+    .footer {
+    background-color: #04bebe;
+    }
+    .article{
+    background-color: white;
+    }
+    .sidebar-kiri {
+    grid-area: left;
+    }
+
+    .article {
+    grid-area: middle;
+    }
+
+    .sidebar-kanan {
+    grid-area: right;
+    }
+
+    .footer {
+    grid-area: footer;
+    height: 70px;
+    text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">Header</div> 
+        <div class="sidebar-kiri">Sidebar</div>
+        <div class="article">Article</div>  
+        <div class="sidebar-kanan">Sidebar</div> 
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
